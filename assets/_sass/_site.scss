@@ -1,5 +1,6 @@
 .block-left {
   float: left;
+  width: 35%;
   .content {
     z-index: 1;
     position: relative;
@@ -9,11 +10,11 @@
 .block-right {
   float: right;
   overflow-y: auto;
+  width: 65%;    
 }
 
 .block-left,
 .block-right {
-  width: 50%;
   height: 100%;
   position: relative;
   display: table;
@@ -445,6 +446,7 @@ canvas {
       height: auto;
       display: block;
       max-width: 800px;
+        padding-top: 0px;
     }
   }
   .logo {
@@ -452,8 +454,13 @@ canvas {
     left: 20px;
     position: absolute;
     img {
-      width: 50px;
-      height: auto;
+        display: block;
+        max-width: 100%;
+        width: 50px;
+        height: auto;
+        -ms-interpolation-mode: bicubic;
+        image-rendering: optimizeQuality;
+        margin: 0 auto;
     }
     &:after {
       display: none;
@@ -868,4 +875,8 @@ canvas {
       }
     }
   }
+}
+
+.info {
+    width:300px;
 }
